@@ -18,7 +18,9 @@ import DeleteImg from './assets/trash.png';
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginBottom: 10,
+    marginTop: 10
   },
   title: {
     fontSize: 25,
@@ -32,6 +34,9 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     marginRight: 20
+  },
+  optionHome: {
+    backgroundColor: 'red'
   }
 })
 
@@ -57,7 +62,7 @@ function App() {
       <Title/>
       <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen name="Home" component={Home} />
+          <Tab.Screen name="Home" component={Home} options={{tabBarBadge: () => <Image source={CreateImg} style={{width:25, height:25}}/>}}/>
           <Tab.Screen name="Add" component={AddUser} />
         </Tab.Navigator>
       </NavigationContainer>

@@ -6,23 +6,10 @@ import { List, ItemInfo } from './List';
 const Stack = createNativeStackNavigator();
 
 function Home() {
-    
-
-    // const GetData = async () => {
-    //     await axios.get(url + 'get-data')
-    //         .then(res => {
-    //             SetItem(res.data.succes)
-    //         })
-    // }
-
-    // useEffect(() => {
-    //     GetData();
-    //     console.log(item)
-    // }, [])
 
     return (
         <Stack.Navigator initialRouteName="Users">
-            <Stack.Screen name="Users" component={List} />
+            <Stack.Screen name="Users" component={List} options={{headerShown: false}}/>
             <Stack.Screen name="ItemInfo" component={ItemInfo} />
         </Stack.Navigator>
     );

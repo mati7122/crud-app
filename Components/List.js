@@ -47,13 +47,6 @@ export function List() {
 
     const [item, SetItem] = useState('No hay datos para mostrar');
 
-    // const GetData = async () => {
-    //     axios.get(url + 'get-data')
-    //         .then(res => {
-    //             SetItem(res.data.succes)
-    //         })
-    // }
-
     useEffect(() => {
         const fetch = async () => {
             try {
@@ -66,17 +59,14 @@ export function List() {
 
     return (
         <View>
-            {/* {item.length == undefined &&
-                <Text>Error</Text>
-            }
-            {item.length >= 1 &&
-                item.map(i => <Item name={i.name} id={i._id}/>)
-            } */}
-            <>
-                {item.succes?.map(i, idx => <Item name={i.name} id={i._id} key={idx} />)
 
-                }
-            </>
+            {!item.succes &&
+                <Text>No hay datos para mostrar</Text>
+            }
+            {item.succes?.map(i => <Item name={i.name} id={i._id} />)
+
+            }
+
         </View>
     );
 }
