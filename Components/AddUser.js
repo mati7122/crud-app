@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Text, View, TextInput, Button, StyleSheet, Alert, TouchableOpacity } from "react-native";
+import { Text, View, TextInput, StyleSheet, Alert, TouchableOpacity } from "react-native";
 import { useForm, Controller } from "react-hook-form";
 import axios from 'axios';
 import Global from '../Global';
@@ -28,7 +28,7 @@ function AddUser() {
             <Controller
                 control={control}
                 rules={{
-                    required: true,
+                    required: true
                 }}
                 render={({ field: { onChange, onBlur, value } }) => (
                     <TextInput
