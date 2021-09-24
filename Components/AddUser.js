@@ -100,7 +100,6 @@ function AddUser() {
             />
             {errors.location && <Text>Required</Text>}
 
-            {/* <Button title="Submit" onPress={handleSubmit(onSubmit)} /> */}
             <TouchableOpacity style={styles.button} onPress={handleSubmit(onSubmit)}>
                 <Text style={styles.buttonText}>Submit</Text>
             </TouchableOpacity>
@@ -141,4 +140,7 @@ const styles = StyleSheet.create({
     }
 })
 
-export default AddUser;
+export {
+    AddUser,
+    styles
+}
